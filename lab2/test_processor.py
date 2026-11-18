@@ -2,7 +2,7 @@ import pytest
 from legacy_processor import process as legacy_process
 from refactored_processor import process as new_process
 
-TEST_CASES=[
+TEST_CASES = [
     {"type": "A", "amount": 1200, "status": "new"},
     {"type": "A", "amount": 600, "status": "new"},
     {"type": "A", "amount": 100, "status": "new"},
@@ -14,11 +14,13 @@ TEST_CASES=[
     {"type": None, "amount": 50, "status": "new"},
 ]
 
+
 @pytest.mark.parametrize("payload", TEST_CASES)
 def test_regression_behavior(payload: dict) -> None:
-    legacy_res= legacy_process(payload)
-    new_res= new_process(payload)
-    assert new_res== legacy_res
+    legacy_res = legacy_process(payload)
+    new_res = new_process(payload)
+    assert new_res == legacy_res
+
 
 def test_negative_values():
     with pytest.raises(ValueError):

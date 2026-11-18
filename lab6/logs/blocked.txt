@@ -1,0 +1,19 @@
+PS C:\Users\User\OneDrive\Desktop\Labs.AI> git commit -m "зробив лабораторну"
+trim trailing whitespace........................................Passed
+end of file fixer..............................................Passed
+check yaml.....................................................Passed
+check json.....................................................Passed
+detect private key.............................................Passed
+black..........................................................Passed
+flake8.........................................................Passed
+mypy...........................................................Passed
+commitizen.....................................................Failed
+- hook id: commitizen
+- exit code: 1
+
+[commitizen] Error: The commit message does not match the conventional commits standard.
+Format required: <type>(<scope>): <subject>
+Example: feat(lab6): add pre-commit configuration
+
+Your message was: "зробив лабораторну"
+Commit blocked by commitizen.

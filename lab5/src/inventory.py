@@ -1,6 +1,6 @@
 from typing import Generic, Optional, TypeVar, Callable, List, Dict, Any
 
-T= TypeVar("T")
+T = TypeVar("T")
 
 
 class EquipmentManager(Generic[T]):

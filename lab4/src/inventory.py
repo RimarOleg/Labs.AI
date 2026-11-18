@@ -1,6 +1,8 @@
 from typing import Generic, Optional, TypeVar, Callable, List, Dict, Any
 
-T= TypeVar("T")
+T = TypeVar("T")
+
+
 class EquipmentManager(Generic[T]):
     """Менеджер для обліку обладнання та довільних елементів.
 
@@ -9,9 +11,10 @@ class EquipmentManager(Generic[T]):
         items: Список елементів у сховищі.
     """
 
-    def __init__(self, owner: str)-> None:
+    def __init__(self, owner: str) -> None:
         self.owner: str = owner
-        self.items: List[Dict[str, Any]]= []
+        self.items: List[Dict[str, Any]] = []
+
     def add_item(self, name: str, category: str, price: float) -> Dict[str, Any]:
         """Додає новий елемент до інвентарю.
 
@@ -27,7 +30,9 @@ class EquipmentManager(Generic[T]):
         self.items.append(item)
         return item
 
-    def find_items(self, predicate: Callable[[Dict[str, Any]], bool]) -> List[Dict[str, Any]]:
+    def find_items(
+        self, predicate: Callable[[Dict[str, Any]], bool]
+    ) -> List[Dict[str, Any]]:
         """Шукає елементи за заданою умовою (предикатом).
 
         Args:
@@ -48,12 +53,12 @@ class EquipmentManager(Generic[T]):
         Returns:
             Сумарна вартість (float).
         """
-        total= 0.0
+        total = 0.0
         for item in self.items:
             total += float(item["price"])
         return total
 
-    def get_newest_item(self)-> Optional[Dict[str, Any]]:
+    def get_newest_item(self) -> Optional[Dict[str, Any]]:
         """Повертає останній доданий елемент або None, якщо інвентар порожній.
 
         Returns:

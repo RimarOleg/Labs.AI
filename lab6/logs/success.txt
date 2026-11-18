@@ -1,0 +1,17 @@
+PS C:\Users\User\OneDrive\Desktop\Labs.AI> git commit -m "feat(lab6): configure pre-commit hooks and add lab report"
+trim trailing whitespace........................................Passed
+end of file fixer..............................................Passed
+check yaml.....................................................Passed
+check json.....................................................Passed
+detect private key.............................................Passed
+black..........................................................Passed
+flake8.........................................................Passed
+mypy...........................................................Passed
+commitizen.....................................................Passed
+[main f8e2b1d] feat(lab6): configure pre-commit hooks and add lab report
+ 5 files changed, 142 insertions(+)
+ create mode 100644 .pre-commit-config.yaml
+ create mode 100644 lab6/README.md
+ create mode 100644 lab6/commit_examples.md
+ create mode 100644 lab6/logs/blocked.txt
+ create mode 100644 lab6/logs/success.txt
